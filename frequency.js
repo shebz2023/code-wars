@@ -2,9 +2,10 @@
 
 function frequencies(s) {
   const map = new Map();
-  for (let i = o; i < s.length; i++) {
+  for (const letter of s) {
+    map.set(letter, map.get(letter) + 1 || 1);
   }
-  return map.get("1");
+  return map;
 }
 
-console.log(frequencies("hello world"));
+console.log(frequencies("hello abana"));
