@@ -12,10 +12,10 @@
 // arrayStats([1, 2, 3, 4, 5]); // should return { sum: 15, average: 3.00, min: 1, max: 5 }
 
 function arrayStats(s) {
-     
+  const sum = s.reduce((tot, acc) => tot + acc);
   return {
-    sum: s.reduce((tot, acc) => tot + acc),
-    average: s.reduce((tot, acc) => tot + acc) / s.length,
+    sum,
+    average: (sum / s.length).toFixed(2),
     min: Math.min(...s),
     max: Math.max(...s),
   };
